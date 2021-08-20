@@ -71,7 +71,7 @@ h1 {
         HEADER
 ===========================*/
 header {
-    background: #f2f2f2 url(./assets/home/bg-pattern-header.svg) no-repeat center -170px;
+    background: #f2f2f2 url(bg-pattern-header.svg) no-repeat center -170px;
     background-size: 458px 458px;
     height: 110vh;
     padding-top: 48px;
@@ -188,7 +188,7 @@ form {
 
 select {
     appearance: none;
-    background: #fff url(./assets/sign-up/icon-arrow-down.svg) no-repeat right center;
+    background: #fff url(icon-arrow-down.svg) no-repeat right center;
 }
 
 input, select {
@@ -209,7 +209,7 @@ input, select {
 
 input:invalid {
     border-bottom: 1px solid red;
-    background: url(./assets/sign-up/icon-cross.svg) no-repeat right center;
+    background: url(icon-cross.svg) no-repeat right center;
 }
 
 input:focus {
@@ -228,7 +228,7 @@ input:focus {
 ===========================*/
 footer {
     height: 45vh;
-    background: var(--dark-background-clr) url(./assets/home/bg-pattern-footer.svg) no-repeat center;
+    background: var(--dark-background-clr) url(bg-pattern-footer.svg) no-repeat center;
     background-size: 800px 800px;
 }
 
