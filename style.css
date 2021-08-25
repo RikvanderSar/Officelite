@@ -1,0 +1,566 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*      CUSTOM VARIABLES         */
+
+:root {
+    --fw-n: 400;
+    --fw-b: 700;
+
+    --fs-p1: 1.125rem;
+    --fs-p2: 1rem;
+    --fs-h1: 2.5625rem;
+    --fs-h2: 1.25rem;
+    --fs-h3: 1rem;
+
+    --primary-font-clr: #747B95;
+    --primary-header-clr: #333950;
+    --dark-background-clr: #25293A;
+    --darkblue-clr: #5175FF;
+    --lightblue-clr: #829CFF;
+    --red-clr: #F05B5B;
+}
+
+/*      GLOBAL LAYOUT SETTING        */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--primary-font-clr);
+    line-height: 26px;
+    text-align: center;
+    font-size: clamp(1rem, 2.4vw, 1.3rem);
+}
+
+.container {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: clamp(2.3rem, 4.5vw, 3rem);
+    color: var(--primary-header-clr);
+    line-height: 42px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/*      BUTTONS LAYOUT      */
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 27.9px;
+    font-weight: var(--fw-b);
+}
+
+.btn--darkblue {
+    background: var(--darkblue-clr);
+    color: white;
+}
+
+.btn--darkblue:hover,
+.btn--darkblue:focus {
+    background: var(--lightblue-clr);
+}
+
+.btn--lightblue {
+    background: rgba(81, 117, 255, 0.15);
+    color: var(--darkblue-clr);
+}
+
+.btn--lightblue:hover,
+.btn--lightblue:focus {
+    background: rgba(81, 117, 255, 0.25);
+}
+
+.btn--white {
+    background: white;
+    color: var(--darkblue-clr);
+}
+
+.btn--white:hover,
+.btn--white:focus {
+    color: var(--lightblue-clr);
+}
+
+
+/* ==========================
+        HEADER
+===========================*/
+header {
+    background: #f2f2f2 url(./assets/home/bg-pattern-header.svg) no-repeat center -170px;
+    background-size: 450px 450px;
+    padding-top: 48px;
+    height: 200vh;
+}
+
+.header--signup {
+    height: 110vh;
+}
+
+.header__img-logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.header__hero {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.h1--signup {
+    margin-top: 80px;
+}
+
+.header__img-charts,
+h1,
+.header__text {
+    margin-bottom: 24px;
+}
+
+.header__img-charts {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.btn--header {
+    box-shadow: 0px 7px 8px 2px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 750px) {
+    header {
+        background-position: 150% -170px;
+        background-size: 500px 500px;
+        height: 140vh;
+    }
+
+    h1 {
+        line-height: 50px;
+    }
+
+    .header__img-logo {
+        margin: 0;
+    }
+
+    .header__hero {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .header__img-charts {
+        grid-column: 2;
+        justify-self: end;
+        align-self: center;
+        margin: 0;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .header__content {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+    }
+
+    h1,
+    .header__text,
+    .btn--header {
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media (min-width: 1150px) {
+    header {
+        background-position: 160% -250px;
+        background-size: 750px 750px;
+        height: 120vh;
+    }
+
+    h1 {
+        line-height: 60px;
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+/* ==========================
+        MAIN
+===========================*/
+
+
+ .main--signup {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero__timer {
+    margin-top: 3em;
+}
+
+
+
+
+/*      Signup Form         */
+
+form {
+    border-radius: 13px;
+    background: white;
+    padding: 1.5em 2em;
+    color: var(--primary-font-clr);
+    margin-top: 4rem;
+}
+
+select {
+    appearance: none;
+    background: #fff url(./assets/sign-up/icon-arrow-down.svg) no-repeat right center;
+}
+
+input, select {
+    font-family: inherit;
+    font-size: inherit;
+    opacity: 0.75;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 1.5em;
+    /* outline is the border of the field when selected / focus */
+    outline: none; 
+}
+
+.form__select--accent {
+    font-weight: var(--fw-b);
+}
+
+input:invalid {
+    border-bottom: 1px solid red;
+    background: url(./assets/sign-up/icon-cross.svg) no-repeat right center;
+}
+
+input:focus {
+    border-bottom: 1px solid grey;
+}
+
+.btn--optin {
+    width: 100%;
+    margin-top: 3em;
+    padding: 1.2em;
+    font-size: 1rem;
+} */
+
+/*      PRICECARDS       */
+
+.pricecard-section {
+    margin-bottom: 6em;
+    position: relative;
+    z-index: 1;
+}
+
+.pricecard {
+    padding: 2.5em 2em;
+    border-radius: 13px;
+    margin-bottom: 2rem;
+    background: white;
+}
+
+.pricecard__header {
+    color: var(--primary-header-clr);
+    font-weight: var(--fw-b);
+    margin-bottom: 2em;
+}
+
+.pricecard__price {
+    font-size: clamp(3rem, 4vw, 3.5rem);
+    color: var(--primary-header-clr);
+    font-weight: var(--fw-b);
+    margin-bottom: 0.5em;
+}
+
+.pricecard__sub-price {
+    margin-bottom: 4em;
+    color: var(--primary-header-clr);
+}
+
+.pricecard__details {
+    margin-bottom: 1.5em;
+}
+
+.btn--lightblue,
+.btn--white {
+    margin-top: 1em;
+}
+
+.pricecard--standout {
+    background: var(--darkblue-clr) url(./assets/home/bg-pattern-pricing.svg) no-repeat center -400px;
+    color: white;
+}
+
+.pricecard--standout-pricing {
+    color: white;
+}
+
+.pricecard--standout-details {
+    color: white;
+    opacity: 0.75;
+}
+
+@media (min-width: 750px) {
+    .pricecard {
+        padding: 2.5em;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pricecard--left {
+        width: 50%;
+    }
+    .pricecard--right {
+        width: 50%;
+    }
+
+    .pricecard__header {
+        margin-bottom: 1em;
+    }
+
+    .pricecard__sub-price {
+        margin-bottom: 1em;
+    }
+
+    .pricecard__details {
+        margin: 1.5em 0 0 0;
+    }
+}
+
+@media (min-width: 1150px) {
+    .pricecard-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pricecard {
+        padding: 2.5em 2em;
+        display: block;
+        max-width: 32%;
+        text-align: center;
+    }
+
+    .pricecard--left {
+        width: 100%;
+    }
+
+    .pricecard--right {
+        width: 100%;
+    }
+
+    .btn--lightblue,
+    .btn--white {
+    margin-top: 1.5em;
+    }
+}
+
+/*      Countdown timer section       */
+
+.countdown-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.countdown__header {
+    color: white;
+    text-transform: uppercase;
+    font-weight: var(--fw-b);
+    letter-spacing: 5px;
+    margin-bottom: 2em;
+}
+
+.timer__text {
+    text-transform: uppercase;
+    font-weight: var(--fw-b);
+    letter-spacing: 5px;
+    margin-bottom: 2em;
+}
+
+.countdown__header--date {
+    color: var(--darkblue-clr);
+}
+
+.timer__text--date {
+    color: var(--darkblue-clr);
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3em;
+}
+
+.countdown-card {
+    width: 70px;
+    height: 100px;
+    background-color: var(--primary-header-clr);
+    color: white;
+    border-radius: 5px;
+}
+
+.timer__countdown-cards {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+
+.countdown-card__number {
+    font-size: 2rem;
+    font-weight: var(--fw-b);
+    margin-top: 2rem;
+}
+
+.countdown-card__unit {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    font-weight: var(--fw-b);
+}
+
+/*      countdown MODIFICATIONS        */
+
+.countdown-card__number--signup {
+    color: var(--darkblue-clr);
+}
+.countdown-card--signup {
+    background: rgba(81, 117, 255, 0.15);
+}
+
+.footer__coming--signup {
+    color: var(--primary-header-clr);
+}
+
+.countdown-card__unit--signup {
+    color: var(--primary-header-clr);
+    opacity: 1;
+}
+
+
+@media (min-width: 750px) {
+    .countdown-card {
+        width: 90px;
+        height: 110px;
+    }
+
+    .countdown-card__number {
+        font-size: 2.5rem;
+        margin: 2.5rem 0 0.5rem;
+        
+    }
+
+    .countdown-card__unit {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1150px) {
+    .countdown-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .countdown-content {
+        margin: 0;
+    }
+
+    .countdown__header {
+        grid-column: 1;
+        align-self: center;
+    }
+
+    .countdown-card {
+        margin-right: 2em;
+    }
+
+    .btn--countdown {
+        align-self: center;
+    }
+}
+
+/* =======================
+        FOOTER
+ ========================= */
+footer {
+    height: 185vh;
+    background: var(--dark-background-clr) url(./assets/home/bg-pattern-footer.svg) no-repeat center 225px;
+    background-size: 1202px 1202px;
+}
+.footer--signup {
+    height: 45vh;
+    background: var(--dark-background-clr) url(./assets/home/bg-pattern-footer.svg) no-repeat center;
+    background-size: 800px 800px;
+}
+
+@media (min-width: 750px) {
+    footer {
+        height: 130vh;
+    }
+}
+
+@media (min-width: 1150px) {
+    footer {
+        height: 80vh;
+    }
+
+    .body--signup {
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .header--signup {
+        background-image: none;
+        height: 100vh;
+    }
+
+    .footer--signup {
+        height: 100vh;
+    }
+
+    .main--signup {
+        max-width: none;
+        text-align: left;
+        margin-top: 4em;
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        column-gap: 4rem;
+    }
+
+    .hero__content {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .timer__countdown-cards {
+        margin: 0;
+        text-align: center;
+    }
+
+    form {
+        grid-column: 2;
+        grid-row: 1;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}

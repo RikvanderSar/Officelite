@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/bca1f4dfa6.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Officelite coming soon site</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img class="header__img-logo" src="./assets/shared/logo.svg" alt="Officelite compagny logo">
+      <div class="header__hero">
+        <img class="header__img-charts" src="./assets/home/illustration-charts.svg" alt="Table with charts">
+        <div class="header__content">
+          <h1>A simple solution to complex tasks is coming soon</h1>
+          <p class="header__text">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
+            collaboration platform built with an intuitive interface to improve productivity.</p>
+          <a href="./sign-up.html" class="btn btn--darkblue btn--header">Get Started</a>
+        </div>
+      </div>
+      <main>
+        <div class="pricecard-section">
+          <div class="pricecard">
+            <div class="pricecard--left">
+              <h2 class="pricecard__header">Basic</h2>
+              <p class="pricecard__price">Free</p>
+              <p class="pricecard__sub-price">Up to 5 users for free</p>
+            </div>
+            <ul class="pricecard--right">
+              <li class="pricecard__details">Basic document collaboration</li>
+              <li class="pricecard__details">2 GB storage</li>
+              <li class="pricecard__details">Great security and support</li>
+            </ul>
+            <a class="btn btn--lightblue" href="./sign-up.html">Try for Free</a>
+          </div>
+      
+          <div class="pricecard pricecard--standout">
+            <div class="pricecard--left">
+              <h2 class="pricecard__header pricecard--standout-pricing">Pro</h2>
+              <p class="pricecard__price pricecard--standout-pricing">$9.99</p>
+              <p class="pricecard__sub-price pricecard--standout-pricing">Per user, billed monthly</p>
+            </div>
+            <ul class="pricecard--right">
+              <li class="pricecard__details pricecard--standout-details">All essential integrations</li>
+              <li class="pricecard__details pricecard--standout-details">50 GB storage</li>
+              <li class="pricecard__details pricecard--standout-details">More control and insights</li>
+            </ul>
+            <a class="btn btn--white" href="./sign-up.html">Try for Free</a>
+          </div>
+      
+          <div class="pricecard">
+            <div class="pricecard--left">
+              <h2 class="pricecard__header">Ultimate</h2>
+              <p class="pricecard__price">$19.99</p>
+              <p class="pricecard__sub-price">Per user, billed monthly</p>
+            </div>  
+            <ul class="pricecard--right">
+              <li class="pricecard__details">Robust work management</li>
+              <li class="pricecard__details">100 GB storage</li>
+              <li class="pricecard__details">VIP support</li>
+            </ul>
+            <a class="btn btn--lightblue" href="./sign-up.html">Try for Free</a>
+          </div>
+        <!-- end of pricecard-section -->
+        </div>
+      </main> 
+      <div class="countdown-section">
+        <div class="countdown-content">
+          <!-- Renamed footer__coming to countdown__header -->
+          <p class="countdown__header">Coming <span class="countdown__header--date">4 nov 2020</span></p>
+          <div class="countdown">
+            <div class="countdown-card">
+              <p class="countdown-card__number days">47</p>
+              <p class="countdown-card__unit days">days</p>
+            </div>
+            <div class="countdown-card">
+              <p class="countdown-card__number hours">07</p>
+              <p class="countdown-card__unit">hours</p>
+            </div>
+            <div class="countdown-card">
+              <p class="countdown-card__number minutes">56</p>
+              <p class="countdown-card__unit">min</p>
+            </div>
+            <div class="countdown-card">
+              <p class="countdown-card__number seconds">14</p>
+              <p class="countdown-card__unit">sec</p>
+            </div>
+          </div>
+        </div>
+        <!-- changed btn--footer to btn--countdown -->
+        <a class="btn btn--darkblue btn--countdown" href="./sign-up.html">Get Started</a>
+      </div>
+    <!-- end of container -->
+    </div>
+  </header>
+
+  <footer>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
