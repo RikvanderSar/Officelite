@@ -24,7 +24,9 @@
     --red-clr: #F05B5B;
 }
 
-/*      GLOBAL LAYOUT SETTING        */
+/*================================      
+        GLOBAL LAYOUT SETTING        
+=================================*/
 
 body {
     font-family: 'Kumbh Sans', sans-serif;
@@ -112,7 +114,6 @@ header {
 }
 
 .header__img-logo {
-    display: block;
     margin: 0 auto;
 }
 
@@ -203,8 +204,7 @@ h1,
         MAIN
 ===========================*/
 
-
- .main--signup {
+.main--signup {
     max-width: 600px;
     margin: 0 auto;
     position: relative;
@@ -218,52 +218,6 @@ h1,
 
 
 
-/*      Signup Form         */
-
-form {
-    border-radius: 13px;
-    background: white;
-    padding: 1.5em 2em;
-    color: var(--primary-font-clr);
-    margin-top: 4rem;
-}
-
-select {
-    appearance: none;
-    background: #fff url(./assets/sign-up/icon-arrow-down.svg) no-repeat right center;
-}
-
-input, select {
-    font-family: inherit;
-    font-size: inherit;
-    opacity: 0.75;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid grey;
-    padding: 1.5em;
-    /* outline is the border of the field when selected / focus */
-    outline: none; 
-}
-
-.form__select--accent {
-    font-weight: var(--fw-b);
-}
-
-input:invalid {
-    border-bottom: 1px solid red;
-    background: url(./assets/sign-up/icon-cross.svg) no-repeat right center;
-}
-
-input:focus {
-    border-bottom: 1px solid grey;
-}
-
-.btn--optin {
-    width: 100%;
-    margin-top: 3em;
-    padding: 1.2em;
-    font-size: 1rem;
-} */
 
 /*      PRICECARDS       */
 
@@ -499,11 +453,58 @@ input:focus {
     }
 }
 
+/*      Signup Form         */
+
+form {
+    border-radius: 13px;
+    background: white;
+    padding: 1.5em 2em;
+    color: var(--primary-font-clr);
+    margin-top: 4rem;
+}
+
+select {
+    appearance: none;
+    background: #fff url(./assets/sign-up/icon-arrow-down.svg) no-repeat right center;
+}
+
+input, select {
+    font-family: inherit;
+    font-size: inherit;
+    opacity: 0.75;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 1.5em;
+    /* outline is the border of the field when selected / focus */
+    outline: none; 
+}
+
+.form__select--accent {
+    font-weight: var(--fw-b);
+}
+
+input:invalid {
+    border-bottom: 1px solid red;
+    background: url(./assets/sign-up/icon-cross.svg) no-repeat right center;
+}
+
+input:focus {
+    border-bottom: 1px solid grey;
+}
+
+.btn--optin {
+    width: 100%;
+    margin-top: 3em;
+    padding: 1.2em;
+    font-size: 1rem;
+}
+
 /* =======================
         FOOTER
  ========================= */
 footer {
-    height: 185vh;
+    height: 180vh;
     background: var(--dark-background-clr) url(./assets/home/bg-pattern-footer.svg) no-repeat center 225px;
     background-size: 1202px 1202px;
 }
@@ -515,13 +516,13 @@ footer {
 
 @media (min-width: 750px) {
     footer {
-        height: 130vh;
+        height: 145vh;
     }
 }
 
 @media (min-width: 1150px) {
     footer {
-        height: 80vh;
+        height: 90vh;
     }
 
     .body--signup {
