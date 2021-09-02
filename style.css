@@ -106,7 +106,7 @@ header {
     background: #f2f2f2 url(./assets/home/bg-pattern-header.svg) no-repeat center -170px;
     background-size: 450px 450px;
     padding-top: 48px;
-    height: 200vh;
+    height: 1650px;
 }
 
 .header--signup {
@@ -504,7 +504,7 @@ input:focus {
         FOOTER
  ========================= */
 footer {
-    height: 180vh;
+    height: 1500px;
     background: var(--dark-background-clr) url(./assets/home/bg-pattern-footer.svg) no-repeat center 225px;
     background-size: 1202px 1202px;
 }
